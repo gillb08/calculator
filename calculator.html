@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- </main> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to top, lightblue, rgba(129, 204, 179, 0.397));
+            padding: 40px;
+        }
+
+        .container {
+            background: linear-gradient(to right, rgb(233, 195, 200), rgb(182, 109, 178));
+            height: 90vh;
+            width: 30%;
+            border-radius: 10%;
+            margin: auto;
+            display: flex; 
+            
+        }
+        #numb{
+            height: 20px;
+            width: 90%;
+            margin: 20px ;
+            padding: 20px;
+            border-radius: 15.5%;
+            font-weight: bolder;
+            font-size: inherit;
+            color: lightsalmon;
+        }
+        #numb1{
+            height: 20px;
+            width: 90%;
+            margin: 20px ;
+            padding: 20px;
+            border-radius: 15.5%;
+            font-weight: bolder;
+            font-size: inherit;
+            color: lightsalmon;
+        }
+        #numb2{
+            height: 20px;
+            width: 90%;
+            margin: 20px ;
+            padding: 20px;
+            border-radius: 15.5%;
+            font-weight: bolder;
+            font-size: inherit;
+            color: lightsalmon;
+        }
+        .buton{
+            height: 100px;
+            width: 20%;
+            margin: 5px;
+            margin-left: 10px;
+            font-size: 40px;
+            font-weight: 700;
+            border-left: double  4px dodgerblue;
+        }
+       
+        /* .input-box {
+            height: 20px;
+            width: 50%;
+            padding: 10px;
+            margin: 10px;
+            background-color: darkmagenta;
+        }
+
+        #numb {
+            border-radius: 15%;
+            margin: 3px;
+            height: 30px;
+            width: 300px;
+        }
+        button {
+            height: 60px;
+            width: 60px;
+            margin: auto;
+        }
+        .buton{
+             margin-top: 60px ;
+            margin-left: 60px; 
+            margin: auto;
+            height: 100px;
+            width: 80%;
+           
+        } */
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <div class="ball"></div> -->
+        <form action="">
+            <div>
+                <input type="number" id="numb1">
+                <input type="number" id="numb2">
+            </div>
+            <div>
+                <button class="buton" id="add">+</button>
+                <button class="buton" id="sub">-</button>
+                <button class="buton" id="div">/</button>
+                <button class="buton" id="multp">x</button>
+            </div>
+            <div class="outputBox">
+                <input type="text" id="numb" disabled>
+            </div>
+        </form>
+    </div>
+
+
+
+    <script type="text/javascript">
+
+        //NEW.ORTHOLIMBS.COM
+
+        add = document.querySelector("#add");
+        subtract = document.querySelector("#sub");
+        divide = document.querySelector("#div");
+        multiply = document.querySelector("#multp"); 
+        num1 = (document.querySelector("#numb1"));
+        num2 = (document.querySelector("#numb2"));
+        output = (document.querySelector("#numb"))
+
+        add.addEventListener("click", function (e) {
+            result = parseInt(num1.value) + parseInt(num2.value);
+            console.log(result);
+            output.value = result;
+            e.preventDefault();
+        })
+        subtract.addEventListener("click", function (e) {
+            result = parseInt(num1.value) - parseInt(num2.value);
+            console.log(result);
+            output.value = result;
+            e.preventDefault();
+        })
+        divide.addEventListener("click", function (e) {
+            if (parseInt(num2.value) == 0) {
+                result = "Dividing by Zero ain't possible, cow"
+            }else{
+                result = parseInt(num1.value) / parseInt(num2.value);
+            }
+            console.log(result);
+            output.value = result;
+            e.preventDefault();
+        })
+        multiply.addEventListener("click", function (e) {
+            result = parseInt(num1.value) * parseInt(num2.value);
+            console.log(result);
+            output.value = result;
+            e.preventDefault();
+        })
+
+
+        /* <div class="buttoncont">
+             <input type="button" value="+">
+             <input type="button" value="-">
+             <input type="button" value="">
+             <input type="button" value="">
+         </div>
+         <input type="text" id="numb">*/
+        /*if (Number(numb) <= 400) {
+            createBoxes();
+        }
+        else if (Number(numb) <= 500) {
+            var run = confirm('your number is close to the limit. Do you still want to run?');
+            if (run == true) {
+                createBoxes();
+            }
+            else {
+                alert('Maybe next time, try a number lower than 400 just to be safe');
+                window.top.location = window.top.location;
+            }
+            difference between const, let, var.
+        }*/
+     //choose opertaion function
+    </script>
+</body>
+
+</html>
